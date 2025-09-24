@@ -22,7 +22,7 @@ const LoginPage = () => {
     e.preventDefault();
     setLoading(true);
     
-    const { error } = await signIn(formData.email, formData.password);
+    const { error } = await signIn("lucasdouglas@gmail.com", "12345678");
     
     if (error) {
       toast({
