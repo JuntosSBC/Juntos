@@ -55,9 +55,9 @@ const LandingPage = () => {
           </div>
           
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground leading-tight">
-            Você <span className="text-yellow-500">não está sozinho</span>.
+            Você <span className="text-yellow-500">não está sozinho</span>
             <br />
-            Juntos, somos <span className="text-yellow-500">mais fortes</span>.
+            Juntos, somos <span className="text-yellow-500">mais fortes</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
