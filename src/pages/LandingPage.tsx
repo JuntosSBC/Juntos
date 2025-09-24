@@ -22,14 +22,13 @@ const LandingPage = () => {
      {/* Header */}
       <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-           <img
+         <div className="w-50 h-10 rounded-lg flex items-center justify-center">
+              <img
                 src="https://i.imgur.com/m2m29oA.png" // Coloque o caminho da sua imagem aqui
                 alt="Home"
                 className="w-full h-full object-cover rounded-lg"
               />
-      
-          </div>
+            </div>
           <div className="flex gap-4">
             <button
               onClick={() => navigate("/login")}
