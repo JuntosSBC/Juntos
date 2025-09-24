@@ -228,7 +228,7 @@ const LandingPage = () => {
             <img
                 src="https://i.imgur.com/m2m29oA.png" // Coloque o caminho da sua imagem aqui
                 alt="Home"
-                className="w-30 h-7 object-cover rounded-lg"
+                className="w-30 h-10 object-cover rounded-lg"
               />
           </div>
           <p className="text-muted-foreground mb-4">
