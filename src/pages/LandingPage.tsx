@@ -228,14 +228,14 @@ const LandingPage = () => {
             <img
                 src="https://i.imgur.com/m2m29oA.png" // Coloque o caminho da sua imagem aqui
                 alt="Home"
-                className="w-30 h-15 object-cover rounded-lg"
+                className="w-30 h-7 object-cover rounded-lg"
               />
           </div>
           <p className="text-muted-foreground mb-4">
             Uma plataforma segura para conexão e apoio em saúde mental
           </p>
           <p className="text-muted-foreground mb-4">
-            Idealizada por alunos do Camp SBC
+            Criada por alunos do Camp SBC
           </p>
           <div className="w-16 h-1 bg-primary rounded-full mx-auto"></div>
         </div>
