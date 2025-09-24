@@ -203,7 +203,7 @@ const LandingPage = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center max-w-3xl">
           <h2 className="text-4xl font-bold mb-6 text-foreground">
-            Pronto para começar sua jornada de <span className="text-yellow-500">bem-estar</span>?
+            Pronto para começar sua jornada de <span className="text-yellow-500">bem-estar?</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
             Junte-se a nossa comunidade de apoio e comece a construir conexões 
