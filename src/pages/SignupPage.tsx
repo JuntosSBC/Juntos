@@ -51,54 +51,58 @@ const SignupPage = () => {
   }
 
   const handleSignup = async (e: React.FormEvent, role: "user" | "psychologist") => {
-    e.preventDefault();
-    setLoading(true);
-    
-    const formData = role === "user" ? userFormData : psychologistFormData;
-    
-    // Validate passwords match for user signup
-    if (role === "user" && formData.password !== userFormData.confirmPassword) {
-      toast({
-        title: "Erro no cadastro",
-        description: "As senhas não coincidem",
-        variant: "destructive"
-      });
-      setLoading(false);
-      return;
-    }
-    
-    const userData = {
-      nome: formData.name,
-      tipo_usuario: role === "user" ? "comum" : "psychologist",
-      ...(role === "psychologist" && {
-        crp: psychologistFormData.crp,
-        especialidade: psychologistFormData.specialty,
-        bio: psychologistFormData.bio
-      })
-    };
-    
-    const { error } = await signUp(formData.email, formData.password, userData);
-    
-    if (error) {
-      toast({
-        title: "Erro no cadastro",
-        description: error.message === "User already registered" 
-          ? "Este email já está cadastrado" 
-          : "Erro ao criar conta. Tente novamente.",
-        variant: "destructive"
-      });
-    } else {
-      toast({
-        title: "Conta criada com sucesso!",
-        description: role === "psychologist" 
-          ? "Sua conta será verificada em até 24 horas." 
-          : "Bem-vindo à comunidade Juntos!",
-      });
-      navigate("/dashboard");
-    }
-    
+  e.preventDefault();
+  setLoading(true);
+
+  const formData = role === "user" ? userFormData : psychologistFormData;
+
+  if (role === "user" && formData.password !== userFormData.confirmPassword) {
+    toast({
+      title: "Erro no cadastro",
+      description: "As senhas não coincidem",
+      variant: "destructive"
+    });
     setLoading(false);
+    return;
+  }
+
+  const userData = {
+    nome: formData.name,
+    tipo_usuario: role === "user" ? "comum" : "psychologist",
+    ...(role === "psychologist" && {
+      crp: psychologistFormData.crp,
+      especialidade: psychologistFormData.specialty,
+      bio: psychologistFormData.bio
+    })
   };
+
+  const { error } = await signUp(formData.email, formData.password, userData);
+
+  if (error) {
+    toast({
+      title: "Erro no cadastro",
+      description: error.message === "User already registered"
+        ? "Este email já está cadastrado"
+        : "Erro ao criar conta. Tente novamente.",
+      variant: "destructive"
+    });
+  } else {
+    toast({
+      title: "Conta criada com sucesso!",
+      description: role === "psychologist"
+        ? "Sua conta será verificada em até 24 horas."
+        : "Bem-vindo à comunidade Juntos!",
+    });
+
+    // 👉 Envia o email de boas-vindas
+    await sendWelcomeEmail(formData.email, formData.name);
+
+    navigate("/dashboard");
+  }
+
+  setLoading(false);
+};
+
 
   return (
     <div className="min-h-screen bg-background">
