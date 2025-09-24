@@ -29,6 +29,26 @@ const SignupPage = () => {
     specialty: '',
     bio: ''
   });
+  
+  async function sendWelcomeEmail(to: string, name: string) {
+    try {
+      const response = await fetch('/lib/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          to,
+          subject: 'Bem-vindo(a) à Juntos!',
+          text: `Olá ${name},\n\nObrigado por se cadastrar na nossa comunidade Juntos. Estamos felizes em ter você conosco!`,
+        }),
+      });
+
+      if (!response.ok) {
+        console.error('Erro ao enviar email de boas-vindas');
+      }
+    } catch (error) {
+      console.error('Erro na requisição do email:', error);
+    }
+  }
 
   const handleSignup = async (e: React.FormEvent, role: "user" | "psychologist") => {
     e.preventDefault();
