@@ -88,10 +88,13 @@ const SignupPage = () => {
           <Button variant="ghost" size="icon" onClick={() => navigate("/")}>
             <ArrowLeft className="h-4 w-4" />
           </Button>
-          <div className="flex items-center gap-2">
-            <Heart className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold">Juntos</span>
-          </div>
+          <div className="w-50 h-10 rounded-lg flex items-center justify-center">
+              <img
+                src="https://i.imgur.com/m2m29oA.png" // Coloque o caminho da sua imagem aqui
+                alt="Home"
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
         </div>
       </header>
 
