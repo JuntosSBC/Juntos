@@ -225,11 +225,17 @@ const LandingPage = () => {
       <footer className="border-t bg-card/50 py-12 px-4">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <img src={logo} alt="Juntos Logo" className="h-6 w-6" />
-            <span className="text-xl font-bold">Juntos</span>
+            <img
+                src="https://i.imgur.com/m2m29oA.png" // Coloque o caminho da sua imagem aqui
+                alt="Home"
+                className="w-30 h-15 object-cover rounded-lg"
+              />
           </div>
           <p className="text-muted-foreground mb-4">
             Uma plataforma segura para conexão e apoio em saúde mental
+          </p>
+          <p className="text-muted-foreground mb-4">
+            Idealizada por alunos do Camp SBC
           </p>
           <div className="w-16 h-1 bg-primary rounded-full mx-auto"></div>
         </div>
