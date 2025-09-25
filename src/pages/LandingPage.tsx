@@ -51,7 +51,7 @@ const LandingPage = () => {
         <div className="container mx-auto text-center max-w-4xl">
           <div className="mb-6 inline-flex items-center gap-2 bg-card/80 rounded-full px-4 py-2 text-sm font-medium">
             <div className="w-2 h-2 bg-primary rounded-full"></div>
-            Campanha Novembro Amarelo - Prevenção ao Suicídio
+            Campanha Setembro Amarelo - Prevenção ao Suicídio
           </div>
           
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground leading-tight">
