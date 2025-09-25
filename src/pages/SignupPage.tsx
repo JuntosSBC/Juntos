@@ -306,7 +306,7 @@ const SignupPage = () => {
 
                   <div className="bg-secondary-soft p-4 rounded-md">
                     <p className="text-sm text-secondary font-medium">
-                      ⚡ Verificação rápida: Sua conta será analisada em até 24 horas.
+                      ⚡ Verificação rápida: Sua conta será analisada.
                     </p>
                   </div>
 
