@@ -132,8 +132,7 @@ const LandingPage = () => {
                 </div>
                 <CardTitle className="text-xl">Psicólogos Verificados</CardTitle>
                 <CardDescription>
-                  Acesse palestras e encontros conduzidos por profissionais licenciados 
-                  com especialização em saúde mental.
+                  Acesse palestras e encontros conduzidos por profissionais licenciados.
                 </CardDescription>
               </CardHeader>
             </Card>
